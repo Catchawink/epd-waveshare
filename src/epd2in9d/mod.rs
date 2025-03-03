@@ -28,7 +28,7 @@ pub const HEIGHT: u32 = 296;
 /// WIDTH / 8 * HEIGHT
 pub const EPD_ARRAY: u32 = 4736;
 /// Default Background Color (white)
-pub const DEFAULT_BACKGROUND_COLOR: Color = Color::Black;
+pub const DEFAULT_BACKGROUND_COLOR: Color = Color::White;
 const IS_BUSY_LOW: bool = true;
 const SINGLE_BYTE_WRITE: bool = true;
 
