@@ -181,7 +181,7 @@ where
         self.wait_until_idle(spi, delay)?;
 
         self.interface.cmd(spi, Command::DataStartTransmission1)?;
-        self.interface.data_x_times(spi, 0xFF, EPD_ARRAY)?;
+        self.interface.data_x_times(spi, 0x00, EPD_ARRAY)?;
 
         self.interface
             .cmd_with_data(spi, Command::DataStartTransmission2, buffer)?;
