@@ -225,7 +225,7 @@ where
 
         self.interface
             .cmd_with_data(spi, Command::DataStartTransmission2, buffer)?;
-        self.old_data = unsafe { from_raw_parts(buffer.as_ptr(), buffer.len()) };
+        //self.old_data = unsafe { from_raw_parts(buffer.as_ptr(), buffer.len()) };
 
         Ok(())
     }
