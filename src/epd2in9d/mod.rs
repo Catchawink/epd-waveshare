@@ -251,10 +251,10 @@ where
 
     fn clear_frame(&mut self, spi: &mut SPI, delay: &mut DELAY) -> Result<(), SPI::Error> {
         self.interface.cmd(spi, Command::DataStartTransmission1)?;
-        self.interface.data_x_times(spi, 0xFF, EPD_ARRAY)?;
+        self.interface.data_x_times(spi, 0x00, EPD_ARRAY)?;
 
         self.interface.cmd(spi, Command::DataStartTransmission2)?;
-        self.interface.data_x_times(spi, 0x00, EPD_ARRAY)?;
+        self.interface.data_x_times(spi, 0xFF, EPD_ARRAY)?;
 
         self.display_frame(spi, delay)?;
 
